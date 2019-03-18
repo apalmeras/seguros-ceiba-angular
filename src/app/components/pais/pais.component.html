@@ -1,0 +1,12 @@
+<div class="text-right px-3">
+  <button mat-button [matMenuTriggerFor]="animals">{{ paisSeleccionado.codigo }}
+    <i class="material-icons">
+      apps
+    </i>
+  </button>
+
+</div>
+
+<mat-menu #animals="matMenu" >
+  <button mat-menu-item *ngFor="let pais of paises; let i = index" (click)="onSeleccionarPais(pais)">{{pais.codigo}}</button> 
+</mat-menu>

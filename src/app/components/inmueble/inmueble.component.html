@@ -1,0 +1,44 @@
+<div class="container">
+  <a mat-button routerLink="/principal">Volver</a>
+</div>
+<div class="container ">
+    <div class="alert alert-danger" role="alert"  *ngIf="error">
+        <p>Verfica tu estrato</p>
+      </div>
+ 
+  <mat-card class="card-width center">
+    <mat-card-header>
+      <h2>Formulario de Registro</h2>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field class="input-full-width">
+        <mat-select placeholder="Tipo Imueble" [(ngModel)] = "inmueble.tipo">
+          <mat-option *ngFor="let tipo of tipos" [value]="tipo.id">
+            {{tipo.nombre}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="input-full-width">
+        <input [(ngModel)]="inmueble.direccion" matInput maxlength="100" placeholder="Dirección">
+      </mat-form-field>
+
+      <mat-form-field class="input-full-width">
+        <input [(ngModel)]="inmueble.valor" type="number" matInput maxlength="100" placeholder="Valor">
+      </mat-form-field>
+
+      <mat-form-field class="input-full-width">
+        <input [(ngModel)]="inmueble.estrato" type="number" matInput maxlength="100" placeholder="Estrato">
+      </mat-form-field>
+      
+      <mat-form-field class="input-full-width">
+          <input [(ngModel)]="inmueble.metraje" type="number" matInput maxlength="100" placeholder="Metraje">
+        </mat-form-field>
+
+      <mat-card-actions>
+        <button mat-stroked-button color="primary" (click)="guardar()">Registrar</button>
+        <button mat-raised-button color="warn" (click)="reiniciar()">Limpiar</button>
+      </mat-card-actions>
+    </mat-card-content>
+  </mat-card>
+</div>

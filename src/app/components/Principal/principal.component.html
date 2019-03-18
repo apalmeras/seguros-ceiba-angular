@@ -1,0 +1,38 @@
+<div class="container my-2">
+
+    <mat-card class="principal-card">
+        <mat-card-header class="principal-card-header">
+            <mat-card-title>Opciones Rapidas</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-list role="list">
+                <a routerLink="/propietario">
+                    <mat-list-item role="listitem" matRipple [matRippleCentered]="centered">
+                        <mat-icon>face</mat-icon>
+                        <p>Registrate</p>
+                    </mat-list-item>
+                </a>
+                <a routerLink="/inmueble">
+                    <mat-list-item role="listitem" matRipple [matRippleCentered]="centered">
+                        <mat-icon>home</mat-icon>
+                        <p>Registrar Inmueble</p>
+                    </mat-list-item>
+                </a>
+                <a routerLink="/seguro">
+                    <mat-list-item role="listitem" matRipple [matRippleCentered]="centered">
+                        <mat-icon>thumb_up</mat-icon>
+                        <p>Adquirir Seguro</p>
+                    </mat-list-item>
+                </a>
+                <a routerLink="/reclamacion">
+                    <mat-list-item role="listitem" matRipple [matRippleCentered]="centered">
+                        <i class="material-icons">
+                            announcement
+                        </i>
+                        <p>Realizar Reclamación</p>
+                    </mat-list-item>
+                </a>
+            </mat-list>
+        </mat-card-content>
+    </mat-card>
+</div>

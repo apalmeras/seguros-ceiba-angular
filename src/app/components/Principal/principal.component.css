@@ -1,0 +1,16 @@
+.principal-card {
+    margin: 0 auto;
+    max-width: 400px;
+  }
+.principal-card-header{
+    border-bottom: 1px solid grey;
+}
+
+p{
+    margin-bottom: 0;
+    margin-left: 1rem;
+}
+
+a:link{
+    text-decoration: none;
+}
